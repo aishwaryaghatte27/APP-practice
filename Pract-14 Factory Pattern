@@ -1,0 +1,19 @@
+class Laptop:
+    def work(self):
+        print("Laptop is working")
+
+
+class Mobile:
+    def work(self):
+        print("Mobile is working")
+
+
+def device_factory(device):
+    if device == "laptop":
+        return Laptop()
+    elif device == "mobile":
+        return Mobile()
+
+
+device = device_factory("laptop")
+device.work()

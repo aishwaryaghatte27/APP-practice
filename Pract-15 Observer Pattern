@@ -1,0 +1,19 @@
+class YouTubeChannel:
+    def __init__(self):
+        self.subscribers = []
+
+    def subscribe(self, name):
+        self.subscribers.append(name)
+
+    def upload_video(self):
+        for name in self.subscribers:
+            print(name, "received a notification")
+
+
+channel = YouTubeChannel()
+
+channel.subscribe("Priya")
+channel.subscribe("Sneha")
+channel.subscribe("Ananya")
+
+channel.upload_video()

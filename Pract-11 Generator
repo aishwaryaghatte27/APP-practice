@@ -1,0 +1,9 @@
+def fruits():
+    for fruit in ["Apple", "Mango", "Banana"]:
+        yield fruit
+
+fruit_generator = fruits()
+
+print(next(fruit_generator))
+print(next(fruit_generator))
+print(next(fruit_generator))

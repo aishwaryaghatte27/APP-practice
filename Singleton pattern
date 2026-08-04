@@ -1,0 +1,13 @@
+class Library:
+    _instance = None
+
+    def __new__(cls):
+        if cls._instance is None:
+            cls._instance = super().__new__(cls)
+        return cls._instance
+
+
+l1 = Library()
+l2 = Library()
+
+print(l1 is l2)   # True
